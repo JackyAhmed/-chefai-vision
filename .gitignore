@@ -1,20 +1,20 @@
-# Dependencies
+# Dependencies — never commit these
 node_modules/
 frontend/node_modules/
 backend/node_modules/
 
-# Build output — Railway builds this fresh on deploy
+# Frontend build — Railway builds this fresh inside Docker
 frontend/dist/
 
-# Environment files — NEVER commit these
+# Environment files — NEVER commit real secrets
 backend/.env
 .env
 
-# Database — Railway uses ephemeral storage; DB rebuilds on each deploy
+# Database — reset on each deploy (Railway ephemeral filesystem)
 backend/data/
 data/
 
-# OS / editor
+# OS / editor noise
 .DS_Store
 Thumbs.db
 .vscode/
