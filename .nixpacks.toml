@@ -1,0 +1,14 @@
+# Nixpacks build configuration for Railway
+# Adds Python + build tools needed to compile better-sqlite3 (native module)
+
+[phases.setup]
+nixPkgs = ["nodejs_20", "python3", "gcc", "gnumake"]
+
+[phases.install]
+cmds = ["npm run setup"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm run start"
