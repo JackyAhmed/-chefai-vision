@@ -7,10 +7,11 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "setup": "npm install --prefix backend && npm install --prefix frontend",
-    "build": "npm run build --prefix frontend",
+    "install": "npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "node backend/server.js",
     "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev"
+    "dev:frontend": "npm --prefix frontend run dev",
+    "setup": "npm install --prefix backend && npm install --prefix frontend"
   }
 }
